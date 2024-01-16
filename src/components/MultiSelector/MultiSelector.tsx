@@ -1,4 +1,4 @@
-import React, { Key, useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 // sass
 import './MultiSelector.scss';
