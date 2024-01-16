@@ -1,0 +1,33 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+@mixin scrollbars(
+	$size: 6px,
+	$foreground-color: rgb(213, 213, 213),
+	$background-color: mix($foreground-color, white, 20%)
+) {
+	// For Google Chrome
+	&::-webkit-scrollbar {
+		width: $size;
+		height: $size;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: $foreground-color;
+		border-radius: 20px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: $background-color;
+		margin: 4px;
+	}
+
+	// For Internet Explorer
+	& {
+		scrollbar-face-color: $foreground-color;
+		scrollbar-track-color: $background-color;
+	}
+}
